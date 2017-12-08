@@ -1,0 +1,4 @@
+add_executable(libthread_safe_queue libthread_safe_queue)
+
+add_executable(thread_safe_queue main.cpp)
+target_link_libraries((thread_safe_queue libthread_safe_queue)

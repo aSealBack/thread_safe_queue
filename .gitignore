@@ -1,0 +1,5 @@
+*.sln
+*.vcxproj*
+*sdf
+.vs
+Debug/
