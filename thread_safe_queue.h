@@ -1,7 +1,7 @@
 #pragma once
 
-#ifndef _THREAD_SQFE_QUEUE_
-#define _THREAD_SQFE_QUEUE_
+#ifndef _THREAD_SAFE_QUEUE_
+#define _THREAD_SAFE_QUEUE_
 #include <chrono>
 #include <condition_variable>
 #include <mutex>
@@ -97,4 +97,4 @@ private:
     }
 };
 
-#endif // _THREAD_SQFE_QUEUE_
+#endif // _THREAD_SAFE_QUEUE_
