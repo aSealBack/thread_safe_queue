@@ -63,7 +63,7 @@ public:
     template <class... Args>
     void emplace(Args && ... args) {
         std::lock_guard<std::mutex> lock(mutex);
-        underlying_container.push_back(std::forward(args) ...);
+        underlying_container.push_back(std::forward<Args>(args) ...);
         sentinel.notify_one();
     }
 
@@ -83,7 +83,7 @@ public:
 
 private:
     container_type underlying_container;
-    std::mutex mutex;
+    mutable std::mutex mutex;
     // checks that the queue is not empty
     std::condition_variable sentinel;
 
